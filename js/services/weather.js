@@ -29,6 +29,8 @@
             if(service.forecast === null){
                 return null;
             }
+            service.forecast.data.currently.temperatureMin = parseFloat(service.forecast.data.daily.data[0].temperatureMin).toFixed(0);
+            service.forecast.data.currently.temperatureMax = parseFloat(service.forecast.data.daily.data[0].temperatureMax).toFixed(0);
             service.forecast.data.currently.day = moment.unix(service.forecast.data.currently.time).format('ddd');
             service.forecast.data.currently.temperature = parseFloat(service.forecast.data.currently.temperature).toFixed(0);
             service.forecast.data.currently.wi = "wi-forecast-io-" + service.forecast.data.currently.icon;
