@@ -17,14 +17,14 @@
     <!-- endbower -->
 
     <script src="js/inc/skycons.js"></script>
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+    <script src="https://connect.soundbutt.com/sdk/sdk-3.0.0.js"></script>
 
     <!-- App -->
     <script src="config.js"></script>
     <script src="js/app.js"></script>
 
     <script src="js/services/timebox.js"></script>
-    <script src="js/services/soundcloud.js"></script>
+    <script src="js/services/soundbutt.js"></script>
     <script src="js/services/search.js"></script>
     <script src="js/services/speech.js"></script>
     <script src="js/services/weather.js"></script>
@@ -82,6 +82,8 @@
             <span class="icon dimmed wi {{currentForecast.wi}}"></span>
             <canvas id="icon_weather_current" width="90" height="70"></canvas>
             <span class="temperature" ng-show="currentForecast.temperature" ng-bind="currentForecast.temperature + '&deg;'"></span>
+            <span class="temperature temperature-min" ng-bind="currentForecast.temperatureMin + '&deg;'"></span>
+            <span class="temperature temperature-max" ng-bind="currentForecast.temperatureMax + '&deg;'"></span>
           </div>
           <div class="weather-week-descriptor">
             <span ng-bind="minutelyForecast.summary"></span>
